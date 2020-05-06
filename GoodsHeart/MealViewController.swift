@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -14,11 +15,16 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var ratingControl: RatingControl!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
+    var meal: Meal?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         nameTextField.delegate = self
+        updateSaveButtonState()
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool
@@ -28,7 +34,8 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-
+        updateSaveButtonState()
+        navigationItem.title = textField.text
     }
     
     @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
@@ -53,6 +60,35 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         
         photoImageView.image = selectedImage
         dismiss(animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        guard let button = sender as? UIBarButtonItem, button === saveButton else {
+            os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
+            return
+        }
+        
+        let name = nameTextField.text ?? ""
+        let photo = photoImageView.image
+        let rating = ratingControl.rating
+    
+        meal = Meal(name: name, photo: photo, rating: rating)
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        saveButton.isEnabled = false
+        
+    }
+    
+    private func updateSaveButtonState() {
+        let text = nameTextField.text ?? ""
+        saveButton.isEnabled = !text.isEmpty
+    }
+
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+          dismiss(animated: true, completion: nil)
     }
 }
 
