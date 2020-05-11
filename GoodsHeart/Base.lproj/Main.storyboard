@@ -60,6 +60,7 @@
                                     <outlet property="nameLabel" destination="kcN-7m-yZs" id="h5f-2z-Cfr"/>
                                     <outlet property="photoImageView" destination="Af6-os-r0s" id="Qa1-JF-H01"/>
                                     <outlet property="ratingControl" destination="DJz-3n-jsP" id="bfo-OH-vEx"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="MDD-9e-zfn"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -186,10 +187,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="66G-yI-Aym" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8264" y="-67"/>
+            <point key="canvasLocation" x="-8300" y="488"/>
         </scene>
     </scenes>
     <resources>
         <image name="chicken" width="136.5" height="92.5"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="MDD-9e-zfn"/>
+    </inferredMetricsTieBreakers>
 </document>
