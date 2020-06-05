@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8279E11E24877CF500047459 /* GoodsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8279E11D24877CF500047459 /* GoodsTableViewController.swift */; };
+		8279E12024877D0F00047459 /* GoodsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8279E11F24877D0F00047459 /* GoodsTableViewCell.swift */; };
+		8279E1242487932000047459 /* UpdateGoodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8279E1232487932000047459 /* UpdateGoodsViewController.swift */; };
+		827CF181248A32A1002C15E5 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827CF180248A32A1002C15E5 /* MainTabBarViewController.swift */; };
 		82B316282483E0590049326F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B316272483E0590049326F /* AppDelegate.swift */; };
 		82B3162A2483E0590049326F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B316292483E0590049326F /* SceneDelegate.swift */; };
 		82B3162C2483E0590049326F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B3162B2483E0590049326F /* ViewController.swift */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8279E11D24877CF500047459 /* GoodsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsTableViewController.swift; sourceTree = "<group>"; };
+		8279E11F24877D0F00047459 /* GoodsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsTableViewCell.swift; sourceTree = "<group>"; };
+		8279E1232487932000047459 /* UpdateGoodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateGoodsViewController.swift; sourceTree = "<group>"; };
+		827CF180248A32A1002C15E5 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		82B316242483E0590049326F /* GoodsHeart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodsHeart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82B316272483E0590049326F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82B316292483E0590049326F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +45,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8279E112248625D800047459 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8279E11D24877CF500047459 /* GoodsTableViewController.swift */,
+				8279E1232487932000047459 /* UpdateGoodsViewController.swift */,
+				827CF180248A32A1002C15E5 /* MainTabBarViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8279E11724876DAD00047459 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				8279E112248625D800047459 /* ViewController */,
+				8279E11F24877D0F00047459 /* GoodsTableViewCell.swift */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
 		82B3161B2483E0590049326F = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +83,7 @@
 		82B316262483E0590049326F /* GoodsHeart */ = {
 			isa = PBXGroup;
 			children = (
+				8279E11724876DAD00047459 /* Scripts */,
 				82B316272483E0590049326F /* AppDelegate.swift */,
 				82B316292483E0590049326F /* SceneDelegate.swift */,
 				82B3162B2483E0590049326F /* ViewController.swift */,
@@ -138,8 +166,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8279E1242487932000047459 /* UpdateGoodsViewController.swift in Sources */,
+				8279E11E24877CF500047459 /* GoodsTableViewController.swift in Sources */,
 				82B3162C2483E0590049326F /* ViewController.swift in Sources */,
+				827CF181248A32A1002C15E5 /* MainTabBarViewController.swift in Sources */,
 				82B316282483E0590049326F /* AppDelegate.swift in Sources */,
+				8279E12024877D0F00047459 /* GoodsTableViewCell.swift in Sources */,
 				82B3162A2483E0590049326F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
