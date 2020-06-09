@@ -68,6 +68,7 @@
                                     <outlet property="goodsName" destination="P7Q-c1-Yx4" id="ZCV-m7-F6z"/>
                                     <outlet property="goodsPrice" destination="k0I-nj-ccq" id="Mej-Bm-gxD"/>
                                     <outlet property="goodsSubData" destination="SGc-Wi-Nuz" id="noY-6h-FH8"/>
+                                    <segue destination="rq8-OA-QQh" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="IOD-hK-vg3"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -77,6 +78,7 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Home" selectedImage="house.fill" catalog="system" id="taE-vv-q5M"/>
+                    <navigationItem key="navigationItem" id="PLg-gD-KpU"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0KC-3v-cLZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -106,7 +108,6 @@
         <!--SettingViewController-->
         <scene sceneID="7RW-aS-KS0">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8CN-4l-wjl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController title="SettingViewController" id="frl-W7-9BA" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zNE-lU-AlF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -191,13 +192,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Option" selectedImage="square.grid.2x2.fill" catalog="system" id="vt8-sU-neG"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8CN-4l-wjl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="200" y="787"/>
         </scene>
         <!--DetailGoodsViewController-->
         <scene sceneID="jfT-xe-9KW">
             <objects>
-                <viewController title="DetailGoodsViewController" id="rq8-OA-QQh" sceneMemberID="viewController">
+                <viewController title="DetailGoodsViewController" id="rq8-OA-QQh" customClass="DetailGoodsViewController" customModule="GoodsHeart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MqC-fS-eR2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -207,7 +209,16 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Detail" id="df3-FN-E2t">
-                                        <barButtonItem key="rightBarButtonItem" title="Update" image="pencil" catalog="system" id="TTy-5c-EmU"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="P4C-aR-zOt">
+                                            <connections>
+                                                <action selector="closeScerne:" destination="rq8-OA-QQh" id="tNr-r4-kZG"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Update" image="pencil" catalog="system" id="TTy-5c-EmU">
+                                            <connections>
+                                                <action selector="viewEditScene:" destination="rq8-OA-QQh" id="AfB-mo-zkf"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -255,15 +266,16 @@
                         <viewLayoutGuide key="safeArea" id="k4W-90-Y0C"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Add" selectedImage="pencil" catalog="system" id="7Pb-jO-nKE"/>
+                    <navigationItem key="navigationItem" id="qVV-3v-hGh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJ1-20-AH6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1368" y="1458"/>
+            <point key="canvasLocation" x="-1368" y="1562"/>
         </scene>
-        <!--AddGoodsViewController-->
+        <!--AddOnlinGoodsViewController-->
         <scene sceneID="dnT-hz-YgW">
             <objects>
-                <viewController title="AddGoodsViewController" id="8hk-uG-dcK" customClass="Add" sceneMemberID="viewController">
+                <viewController title="AddOnlinGoodsViewController" id="8hk-uG-dcK" customClass="Add" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j7U-sX-bu9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -329,11 +341,82 @@
             </objects>
             <point key="canvasLocation" x="-601" y="787"/>
         </scene>
+        <!--AddOfflineGoodsViewController-->
+        <scene sceneID="JHl-rb-GlC">
+            <objects>
+                <viewController storyboardIdentifier="AddOfflineGoodsViewController" title="AddOfflineGoodsViewController" id="Zht-rs-Xlp" customClass="Add" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5iJ-me-wrw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2HD-Oq-487">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Add" id="QJb-2b-EY6"/>
+                                </items>
+                            </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R6I-8v-Eo1">
+                                <rect key="frame" x="20" y="178" width="373" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="상품 이름" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTs-9L-7Bz">
+                                <rect key="frame" x="20" y="533" width="129" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="상품 가격" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFZ-bI-Dfl">
+                                <rect key="frame" x="20" y="590" width="81" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="상품 서브데이터" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8I-5k-Gwe">
+                                <rect key="frame" x="20" y="625" width="139" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZ0-wL-3wd">
+                                <rect key="frame" x="20" y="675" width="374" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="상품 카테고리">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyK-83-5jq">
+                                <rect key="frame" x="20" y="123" width="21" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="location.fill" catalog="system"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="경기도 성남시" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKM-lS-N8r">
+                                <rect key="frame" x="49" y="123" width="345" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="pZ3-OH-Wud"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Add" selectedImage="pencil" catalog="system" id="Ynq-L2-S4s"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IBb-nw-2cz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-601.44927536231887" y="1561.6071428571429"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="circle.grid.3x3.fill" catalog="system" width="128" height="112"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="location.fill" catalog="system" width="128" height="115"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="square.grid.2x2.fill" catalog="system" width="128" height="114"/>
     </resources>
