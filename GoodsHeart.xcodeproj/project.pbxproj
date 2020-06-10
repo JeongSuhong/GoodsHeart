@@ -18,9 +18,11 @@
 		82B3162F2483E0590049326F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B3162D2483E0590049326F /* Main.storyboard */; };
 		82B316312483E05A0049326F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82B316302483E05A0049326F /* Assets.xcassets */; };
 		82B316342483E05A0049326F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B316322483E05A0049326F /* LaunchScreen.storyboard */; };
+		ED2192512FCA11FE6A0E5CF8 /* Pods_GoodsHeart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9612AA716B2380F156390FB2 /* Pods_GoodsHeart.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6817B28A38C189AA65B91EC3 /* Pods-GoodsHeart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodsHeart.debug.xcconfig"; path = "Target Support Files/Pods-GoodsHeart/Pods-GoodsHeart.debug.xcconfig"; sourceTree = "<group>"; };
 		8279E11D24877CF500047459 /* GoodsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsTableViewController.swift; sourceTree = "<group>"; };
 		8279E11F24877D0F00047459 /* GoodsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsTableViewCell.swift; sourceTree = "<group>"; };
 		8279E1232487932000047459 /* UpdateGoodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateGoodsViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +36,8 @@
 		82B316302483E05A0049326F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82B316332483E05A0049326F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82B316352483E05A0049326F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9612AA716B2380F156390FB2 /* Pods_GoodsHeart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodsHeart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA137041AB59B3CCBF3405FC /* Pods-GoodsHeart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodsHeart.release.xcconfig"; path = "Target Support Files/Pods-GoodsHeart/Pods-GoodsHeart.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,12 +45,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED2192512FCA11FE6A0E5CF8 /* Pods_GoodsHeart.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		170BA955DDE39BC39EA15E44 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9612AA716B2380F156390FB2 /* Pods_GoodsHeart.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8279E112248625D800047459 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +85,8 @@
 			children = (
 				82B316262483E0590049326F /* GoodsHeart */,
 				82B316252483E0590049326F /* Products */,
+				B6D22B209BD54FE22F4DB637 /* Pods */,
+				170BA955DDE39BC39EA15E44 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +113,16 @@
 			path = GoodsHeart;
 			sourceTree = "<group>";
 		};
+		B6D22B209BD54FE22F4DB637 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6817B28A38C189AA65B91EC3 /* Pods-GoodsHeart.debug.xcconfig */,
+				FA137041AB59B3CCBF3405FC /* Pods-GoodsHeart.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,9 +130,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82B316382483E05A0049326F /* Build configuration list for PBXNativeTarget "GoodsHeart" */;
 			buildPhases = (
+				731DC6EC3C0D708CC96F21B7 /* [CP] Check Pods Manifest.lock */,
 				82B316202483E0590049326F /* Sources */,
 				82B316212483E0590049326F /* Frameworks */,
 				82B316222483E0590049326F /* Resources */,
+				E2122129CEA65C37502B96CF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -163,6 +190,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		731DC6EC3C0D708CC96F21B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoodsHeart-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2122129CEA65C37502B96CF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoodsHeart/Pods-GoodsHeart-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoodsHeart/Pods-GoodsHeart-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoodsHeart/Pods-GoodsHeart-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		82B316202483E0590049326F /* Sources */ = {
@@ -318,6 +387,7 @@
 		};
 		82B316392483E05A0049326F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6817B28A38C189AA65B91EC3 /* Pods-GoodsHeart.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -336,6 +406,7 @@
 		};
 		82B3163A2483E05A0049326F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA137041AB59B3CCBF3405FC /* Pods-GoodsHeart.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
