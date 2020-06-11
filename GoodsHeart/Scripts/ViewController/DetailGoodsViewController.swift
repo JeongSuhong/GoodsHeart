@@ -13,6 +13,8 @@ class DetailGoodsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+                HttpManager().getHttpData()
 
     }
 
