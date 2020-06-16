@@ -72,7 +72,7 @@
                                     <outlet property="goodsName" destination="P7Q-c1-Yx4" id="ZCV-m7-F6z"/>
                                     <outlet property="goodsPrice" destination="k0I-nj-ccq" id="Mej-Bm-gxD"/>
                                     <outlet property="goodsSubData" destination="SGc-Wi-Nuz" id="noY-6h-FH8"/>
-                                    <segue destination="qgk-L4-dSe" kind="presentation" modalPresentationStyle="fullScreen" id="bFd-0G-2b7"/>
+                                    <segue destination="rq8-OA-QQh" kind="show" id="OQj-xf-q5Y"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -236,7 +236,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="상품 이름" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUu-VB-tOc">
-                                <rect key="frame" x="20" y="533" width="129" height="42"/>
+                                <rect key="frame" x="20" y="533" width="374" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
@@ -281,10 +281,15 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="goodsTitle" destination="xUu-VB-tOc" id="gie-cr-vWL"/>
+                        <outlet property="thumnailView" destination="lYH-yU-glp" id="5Up-Lp-a8k"/>
+                        <outlet property="urlField" destination="fIK-nM-smJ" id="6zs-Hc-MkA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJ1-20-AH6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1368" y="1562"/>
+            <point key="canvasLocation" x="-1368.1159420289855" y="1561.6071428571429"/>
         </scene>
         <!--Item-->
         <scene sceneID="n3s-nY-GO0">
@@ -465,6 +470,9 @@
             <point key="canvasLocation" x="-523" y="1562"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="OQj-xf-q5Y"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="circle.grid.3x3.fill" catalog="system" width="128" height="112"/>

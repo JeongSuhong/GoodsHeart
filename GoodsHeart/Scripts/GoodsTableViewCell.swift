@@ -14,13 +14,6 @@ class GoodsTableViewCell: UITableViewCell {
     @IBOutlet weak var goodsPrice: UILabel!
     @IBOutlet weak var goodsSubData: UILabel!
     
-    func GoodsTableViewCell() {
-        goodsName.text = "이름"
-        goodsPrice.text = "1000"
-        goodsSubData.text = "퇴근하고싶음"
-        
-    }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

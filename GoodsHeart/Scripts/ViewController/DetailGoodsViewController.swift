@@ -11,20 +11,28 @@ import SceneKit
 
 class DetailGoodsViewController: UIViewController {
 
+    @IBOutlet weak var urlField: UITextField!
+    @IBOutlet weak var thumnailView: UIImageView!
+    @IBOutlet weak var goodsTitle: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-                HttpManager().getHttpData()
+        HttpManager().getHttpData{ response in
+            self.urlField.text = response.url
+            self.thumnailView.image = UIImage(data: response.thumnail!)
+            self.goodsTitle.text = response.title
+        }
 
     }
 
     @IBAction func closeScerne(_ sender: UIBarButtonItem) {
-                dismiss(animated: false, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func viewEditScene(_ sender: UIBarButtonItem) {
         let controller = self.storyboard?.instantiateViewController(identifier: "AddOfflineGoodsViewController")
         controller?.modalPresentationStyle = .fullScreen
-        self.present(controller!, animated: false, completion: nil)
+        present(controller!, animated: false, completion: nil)
     }
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate{
+class MainTabBarViewController: UITabBarController {
     
     var prevSelectIndex = 0
     
@@ -18,6 +18,11 @@ class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate{
         self.delegate = self
     }
     
+    
+
+}
+ //MARK: - Tab
+extension MainTabBarViewController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
 
         print( tabBarController.selectedIndex)
@@ -43,5 +48,4 @@ class MainTabBarViewController: UITabBarController, UITabBarControllerDelegate{
         prevSelectIndex = tabBarController.selectedIndex
         }
     }
-
 }
