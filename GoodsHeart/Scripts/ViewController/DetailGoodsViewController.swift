@@ -14,15 +14,19 @@ class DetailGoodsViewController: UIViewController {
     @IBOutlet weak var urlField: UITextField!
     @IBOutlet weak var thumnailView: UIImageView!
     @IBOutlet weak var goodsTitle: UILabel!
+    @IBOutlet weak var goodsPrice: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        HttpManager().getHttpData{ response in
-            self.urlField.text = response.url
+        let url = "https://www.coupang.com/vp/products/106800663?itemId=322867424"
+        urlField.text = url
+        
+        DownloadGoodsDataManager().downloadGoodsData(url: url, completion: { response in
             self.thumnailView.image = UIImage(data: response.thumnail!)
             self.goodsTitle.text = response.title
-        }
+            self.goodsPrice.text = response.price
+        })
 
     }
 
