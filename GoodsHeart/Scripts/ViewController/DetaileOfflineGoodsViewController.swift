@@ -11,8 +11,13 @@ import UIKit
 
 class DetailOfflineGoodsViewController : UIViewController {
     
+    @IBOutlet weak var addressText: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    func UpdateAddress(value :String?) {
+        addressText.text = value
+    }
 }

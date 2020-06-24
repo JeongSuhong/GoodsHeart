@@ -33,14 +33,16 @@ class MapViewController : UIViewController, MKMapViewDelegate{
         let center = CLLocation(latitude: mapView.centerCoordinate.latitude, longitude: mapView.centerCoordinate.longitude)
         let geocoder = CLGeocoder()
         let locale = Locale(identifier: "Ko-kr")
-        geocoder.reverseGeocodeLocation(center, preferredLocale: locale, completionHandler: {(placemarks, error) -> Void in if error != nil {
+        geocoder.reverseGeocodeLocation(center, preferredLocale: locale, completionHandler: {(placemarks, error) -> Void in
+            if error != nil {
             NSLog("\(error)")
             return
             }
             guard let placemark = placemarks?.first,
-                let addrList = placemark.addressDictionary?["FormattedAddressLines"] as? [String] else {
+                var addrList = placemark.addressDictionary?["FormattedAddressLines"] as? [String] else {
                     return
             }
+        
             let address = addrList.joined(separator: " ")
             self.locationText.text = address
         })
@@ -51,8 +53,14 @@ class MapViewController : UIViewController, MKMapViewDelegate{
     }
     
     @IBAction func clickSuccess(_ sender: UIButton) {
+        guard let vc = self.presentingViewController as? DetailOfflineGoodsViewController else {
+            return
+        }
+        
+        vc.UpdateAddress(value: self.locationText.text)
+
+        self.presentingViewController?.dismiss(animated: true)
     }
-    
 }
     
 extension MapViewController : CLLocationManagerDelegate

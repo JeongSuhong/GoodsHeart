@@ -434,6 +434,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Add" selectedImage="pencil" catalog="system" id="Ynq-L2-S4s"/>
                     <navigationItem key="navigationItem" title="Add" id="QJb-2b-EY6"/>
+                    <connections>
+                        <outlet property="addressText" destination="qKM-lS-N8r" id="ekd-3H-50Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IBb-nw-2cz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
