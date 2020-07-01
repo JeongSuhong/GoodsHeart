@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import AlamofireImage
 
 
 class DownloadGoodsDataManager
@@ -15,7 +16,7 @@ class DownloadGoodsDataManager
     struct goodsData {
         var title :String = ""
         var price :String = ""
-        var thumnail :Data? = nil
+        var thumnail :Image? = nil
     }
     
     func downloadGoodsData(url: String, completion: @escaping (goodsData) -> Void) {
@@ -37,9 +38,11 @@ class DownloadGoodsDataManager
             let startThumnailIndex = text.range(of: "<meta property=\\\"og:image\\\" content=\\\"")
             var thumnailPath = String(text[startThumnailIndex!.upperBound...])
             thumnailPath = String(thumnailPath[..<thumnailPath.range(of: "\\\"")!.lowerBound])
-            AF.request("https:" + thumnailPath).responseData(completionHandler: { [weak self] thumnailData in
-                result.thumnail = thumnailData.data
-                completion(result)
+            AF.request("https:" + thumnailPath).responseImage(completionHandler: { response in
+                if case .success(let image) = response.result {
+                    result.thumnail = image
+                    completion(result)
+                }
             })
             
             

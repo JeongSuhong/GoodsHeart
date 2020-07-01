@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46B3AE9148419D8CC2CC1BE7 /* Pods_GoodsHeart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635C96BF043965EA78561D81 /* Pods_GoodsHeart.framework */; };
 		8279E11E24877CF500047459 /* GoodsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8279E11D24877CF500047459 /* GoodsTableViewController.swift */; };
 		8279E12024877D0F00047459 /* GoodsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8279E11F24877D0F00047459 /* GoodsTableViewCell.swift */; };
 		827CF181248A32A1002C15E5 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827CF180248A32A1002C15E5 /* MainTabBarViewController.swift */; };
@@ -20,16 +21,16 @@
 		82B316342483E05A0049326F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B316322483E05A0049326F /* LaunchScreen.storyboard */; };
 		82E55082249B9EE800CD2271 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E55081249B9EE800CD2271 /* MapViewController.swift */; };
 		82E55084249BA08B00CD2271 /* DetaileOfflineGoodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E55083249BA08B00CD2271 /* DetaileOfflineGoodsViewController.swift */; };
-		ED2192512FCA11FE6A0E5CF8 /* Pods_GoodsHeart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9612AA716B2380F156390FB2 /* Pods_GoodsHeart.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		635C96BF043965EA78561D81 /* Pods_GoodsHeart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodsHeart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6817B28A38C189AA65B91EC3 /* Pods-GoodsHeart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodsHeart.debug.xcconfig"; path = "Target Support Files/Pods-GoodsHeart/Pods-GoodsHeart.debug.xcconfig"; sourceTree = "<group>"; };
 		8279E11D24877CF500047459 /* GoodsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsTableViewController.swift; sourceTree = "<group>"; };
 		8279E11F24877D0F00047459 /* GoodsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodsTableViewCell.swift; sourceTree = "<group>"; };
 		827CF180248A32A1002C15E5 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		8297554F24921725000F3391 /* DownloadGoodsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadGoodsDataManager.swift; sourceTree = "<group>"; };
-		82A5281F24A0AC7600E21C84 /* Seoul.gpx */ = {isa = PBXFileReference; lastKnownFileType = file; path = Seoul.gpx; sourceTree = SOURCE_ROOT; };
+		82A5281F24A0AC7600E21C84 /* Seoul.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Seoul.gpx; sourceTree = SOURCE_ROOT; };
 		82B2BEF6248F7C8900B32374 /* DetailGoodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGoodsViewController.swift; sourceTree = "<group>"; };
 		82B316242483E0590049326F /* GoodsHeart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodsHeart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82B316272483E0590049326F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,7 +42,6 @@
 		82B316352483E05A0049326F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82E55081249B9EE800CD2271 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		82E55083249BA08B00CD2271 /* DetaileOfflineGoodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetaileOfflineGoodsViewController.swift; sourceTree = "<group>"; };
-		9612AA716B2380F156390FB2 /* Pods_GoodsHeart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodsHeart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA137041AB59B3CCBF3405FC /* Pods-GoodsHeart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodsHeart.release.xcconfig"; path = "Target Support Files/Pods-GoodsHeart/Pods-GoodsHeart.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED2192512FCA11FE6A0E5CF8 /* Pods_GoodsHeart.framework in Frameworks */,
+				46B3AE9148419D8CC2CC1BE7 /* Pods_GoodsHeart.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,7 +60,7 @@
 		170BA955DDE39BC39EA15E44 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9612AA716B2380F156390FB2 /* Pods_GoodsHeart.framework */,
+				635C96BF043965EA78561D81 /* Pods_GoodsHeart.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -80,6 +80,7 @@
 		8279E11724876DAD00047459 /* Scripts */ = {
 			isa = PBXGroup;
 			children = (
+				82D4F12724A48D9C00448A2E /* Camera */,
 				82E55080249B9EBB00CD2271 /* Map */,
 				8297554E249214F8000F3391 /* HTTPS */,
 				8279E112248625D800047459 /* ViewController */,
@@ -126,6 +127,13 @@
 				82B316352483E05A0049326F /* Info.plist */,
 			);
 			path = GoodsHeart;
+			sourceTree = "<group>";
+		};
+		82D4F12724A48D9C00448A2E /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 		82E55080249B9EBB00CD2271 /* Map */ = {

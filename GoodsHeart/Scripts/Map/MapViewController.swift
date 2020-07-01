@@ -61,6 +61,29 @@ class MapViewController : UIViewController, MKMapViewDelegate{
 
         self.presentingViewController?.dismiss(animated: true)
     }
+    
+    @IBAction func clickMoveCurrentAddress(_ sender: UIButton) {
+
+        let region = MKCoordinateRegion(center: locationManager.location!.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        self.mapView.setRegion(region, animated: true)
+        
+        let geocoder = CLGeocoder()
+        let locale = Locale(identifier: "Ko-kr")
+        geocoder.reverseGeocodeLocation(locationManager.location!, preferredLocale: locale, completionHandler: {(placemarks, error) -> Void in
+            if error != nil {
+            NSLog("\(error)")
+            return
+            }
+            guard let placemark = placemarks?.first,
+                var addrList = placemark.addressDictionary?["FormattedAddressLines"] as? [String] else {
+                    return
+            }
+        
+            let address = addrList.joined(separator: " ")
+            self.locationText.text = address
+        })
+        
+    }
 }
     
 extension MapViewController : CLLocationManagerDelegate
@@ -75,8 +98,7 @@ extension MapViewController : CLLocationManagerDelegate
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
-        
-        print("!!")
+    
             let location = locations.last! as CLLocation
 
             let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)

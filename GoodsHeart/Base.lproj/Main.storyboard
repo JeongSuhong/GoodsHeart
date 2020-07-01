@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="meK-NS-sUO">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,7 +13,7 @@
                 <navigationController id="4qI-cL-JcO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Zlv-CB-QwN"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tn5-Sv-Hjo">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -29,44 +29,56 @@
             <objects>
                 <tableViewController title="GoodsListViewController" id="4uq-ty-Y9D" customClass="GoodsTableViewController" customModule="GoodsHeart" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gn6-7d-irO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="GoodsCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GoodsCell" id="10D-ux-Tfm" userLabel="GoodsCell" customClass="GoodsTableViewCell" customModule="GoodsHeart" customModuleProvider="target" colorLabel="IBBuiltInLabel-Purple">
-                                <rect key="frame" x="0.0" y="28" width="414" height="150"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="GoodsCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="GoodsCell" rowHeight="150" id="10D-ux-Tfm" userLabel="GoodsCell" customClass="GoodsTableViewCell" customModule="GoodsHeart" customModuleProvider="target" colorLabel="IBBuiltInLabel-Purple">
+                                <rect key="frame" x="0.0" y="28" width="896" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="10D-ux-Tfm" id="ifp-EK-Q99">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
-                                    <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="10D-ux-Tfm" id="ifp-EK-Q99">
+                                    <rect key="frame" x="44" y="0.0" width="808" height="150"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="voW-Ch-bHr">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" id="voW-Ch-bHr">
                                             <rect key="frame" x="20" y="15" width="119" height="120"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="400,000원" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0I-nj-ccq" userLabel="GoodsPrice">
-                                            <rect key="frame" x="157" y="77" width="81" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20/03/01 등록" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGc-Wi-Nuz" userLabel="GoodsSubData">
-                                            <rect key="frame" x="157" y="106" width="103" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="닌텐도 스위치" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7Q-c1-Yx4" userLabel="GoodsName">
-                                            <rect key="frame" x="157" y="24" width="237" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="타이틀입니다 타이틀입니다 타이틀입니다 타이틀입니다 타이틀입니다 " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7Q-c1-Yx4" userLabel="GoodsName">
+                                            <rect key="frame" x="157" y="15" width="631" height="60"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="400,000원" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0I-nj-ccq" userLabel="GoodsPrice">
+                                            <rect key="frame" x="157" y="85" width="623" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20/03/01 등록" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGc-Wi-Nuz" userLabel="GoodsSubData">
+                                            <rect key="frame" x="157" y="111" width="623" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="SGc-Wi-Nuz" firstAttribute="top" secondItem="k0I-nj-ccq" secondAttribute="bottom" constant="5" id="9fR-sc-WOP"/>
+                                        <constraint firstItem="P7Q-c1-Yx4" firstAttribute="leading" secondItem="voW-Ch-bHr" secondAttribute="trailing" constant="18" id="B33-8v-eQ6"/>
+                                        <constraint firstItem="k0I-nj-ccq" firstAttribute="top" secondItem="P7Q-c1-Yx4" secondAttribute="bottom" constant="10" id="CwD-Nq-79U"/>
+                                        <constraint firstItem="SGc-Wi-Nuz" firstAttribute="trailing" secondItem="P7Q-c1-Yx4" secondAttribute="trailingMargin" id="EPv-nv-TRV"/>
+                                        <constraint firstItem="P7Q-c1-Yx4" firstAttribute="trailing" secondItem="ifp-EK-Q99" secondAttribute="trailingMargin" id="JJp-6j-uCD"/>
+                                        <constraint firstItem="k0I-nj-ccq" firstAttribute="leading" secondItem="P7Q-c1-Yx4" secondAttribute="leading" id="QkM-YM-E49"/>
+                                        <constraint firstItem="P7Q-c1-Yx4" firstAttribute="top" secondItem="voW-Ch-bHr" secondAttribute="top" id="W1r-ij-hON"/>
+                                        <constraint firstItem="k0I-nj-ccq" firstAttribute="trailing" secondItem="P7Q-c1-Yx4" secondAttribute="trailingMargin" id="ZSA-cj-uSR"/>
+                                        <constraint firstItem="SGc-Wi-Nuz" firstAttribute="leading" secondItem="P7Q-c1-Yx4" secondAttribute="leading" id="u6z-zA-l58"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <constraints>
+                                    <constraint firstItem="ifp-EK-Q99" firstAttribute="leading" secondItem="10D-ux-Tfm" secondAttribute="leading" id="1sp-Ob-bl7"/>
+                                    <constraint firstAttribute="trailing" secondItem="ifp-EK-Q99" secondAttribute="trailing" id="A53-ir-zH2"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="goodsImage" destination="voW-Ch-bHr" id="4GL-wj-2Dp"/>
                                     <outlet property="goodsName" destination="P7Q-c1-Yx4" id="ZCV-m7-F6z"/>
@@ -120,7 +132,7 @@
             <objects>
                 <viewController title="SettingViewController" id="frl-W7-9BA" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zNE-lU-AlF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="계정 연동" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nQ-Of-hVI">
@@ -206,7 +218,7 @@
                 <navigationController id="hmA-fB-EfK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="5iT-4N-TQI"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Vjp-jc-3Zf">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -222,17 +234,17 @@
             <objects>
                 <viewController title="DetailGoodsViewController" id="rq8-OA-QQh" customClass="DetailGoodsViewController" customModule="GoodsHeart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MqC-fS-eR2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://~" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fIK-nM-smJ">
-                                <rect key="frame" x="20" y="120" width="374" height="34"/>
+                                <rect key="frame" x="20" y="120" width="832" height="34"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lYH-yU-glp">
-                                <rect key="frame" x="20" y="178" width="373" height="320"/>
+                                <rect key="frame" x="255" y="178" width="373" height="320"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="상품 이름" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUu-VB-tOc">
@@ -298,7 +310,7 @@
                 <navigationController id="dHx-Tj-7lI" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="IHp-mb-t5B"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5Ag-1b-0v4">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -312,19 +324,19 @@
         <!--AddOnlinGoodsViewController-->
         <scene sceneID="dnT-hz-YgW">
             <objects>
-                <viewController title="AddOnlinGoodsViewController" id="8hk-uG-dcK" customClass="Add" sceneMemberID="viewController">
+                <viewController title="AddOnlinGoodsViewController" id="8hk-uG-dcK" customClass="DetailGoodsViewController" customModule="GoodsHeart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j7U-sX-bu9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="https://~" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kg9-s7-Tid">
-                                <rect key="frame" x="20" y="120" width="310" height="34"/>
+                                <rect key="frame" x="20" y="120" width="689" height="34"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qWD-q0-cSz">
-                                <rect key="frame" x="20" y="178" width="373" height="320"/>
+                                <rect key="frame" x="255" y="178" width="373" height="320"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="상품 이름" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TsK-Uu-y7X">
@@ -360,6 +372,9 @@
                                 <rect key="frame" x="362" y="126" width="18" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="arrow.clockwise" catalog="system"/>
+                                <connections>
+                                    <action selector="updateGoodsData:" destination="8hk-uG-dcK" eventType="touchUpInside" id="iPJ-Pc-FWj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -367,6 +382,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Add" selectedImage="pencil" catalog="system" id="kiu-j8-2G6"/>
                     <navigationItem key="navigationItem" title="Add" id="wp4-Tw-p6u"/>
+                    <connections>
+                        <outlet property="goodsPrice" destination="ejZ-uT-3Od" id="oJA-qh-LZB"/>
+                        <outlet property="goodsTitle" destination="TsK-Uu-y7X" id="n6Q-Kp-iZ3"/>
+                        <outlet property="thumnailView" destination="qWD-q0-cSz" id="1za-rl-6qe"/>
+                        <outlet property="urlField" destination="kg9-s7-Tid" id="NVm-pj-YNg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eTU-qO-U52" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -377,12 +398,16 @@
             <objects>
                 <viewController storyboardIdentifier="AddOfflineGoodsViewController" title="AddOfflineGoodsViewController" id="Zht-rs-Xlp" customClass="DetailOfflineGoodsViewController" customModule="GoodsHeart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5iJ-me-wrw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R6I-8v-Eo1">
-                                <rect key="frame" x="20" y="178" width="373" height="320"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="R6I-8v-Eo1">
+                                <rect key="frame" x="255" y="178" width="373" height="320"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="XKz-cm-zSi" appends="YES" id="HTl-4i-dHz"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="상품 이름" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTs-9L-7Bz">
                                 <rect key="frame" x="20" y="506" width="373" height="76"/>
@@ -436,9 +461,15 @@
                     <navigationItem key="navigationItem" title="Add" id="QJb-2b-EY6"/>
                     <connections>
                         <outlet property="addressText" destination="qKM-lS-N8r" id="ekd-3H-50Z"/>
+                        <outlet property="photoImage" destination="R6I-8v-Eo1" id="syX-Dk-BgY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IBb-nw-2cz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="XKz-cm-zSi">
+                    <connections>
+                        <action selector="tapImageView:" destination="Zht-rs-Xlp" id="XVp-pp-dOk"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="221.73913043478262" y="1561.6071428571429"/>
         </scene>
@@ -447,7 +478,7 @@
             <objects>
                 <viewController id="fld-hZ-mU9" customClass="MapViewController" customModule="GoodsHeart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BZW-rb-pNW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Nsz-rw-ihU" customClass="CustomMapView" customModule="GoodsHeart" customModuleProvider="target">
@@ -477,6 +508,14 @@
                                 <rect key="frame" x="167" y="408.33333333333303" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z65-W4-q7k">
+                                <rect key="frame" x="344" y="167" width="50" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="location.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="clickMoveCurrentAddress:" destination="fld-hZ-mU9" eventType="touchUpInside" id="RXx-jP-aQH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="a6B-aI-vkS"/>
@@ -496,7 +535,7 @@
                 <navigationController id="P83-6Q-Hwi" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="86E-Ui-UsD"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rBB-cX-ba5">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -510,8 +549,10 @@
     </scenes>
     <resources>
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
+        <image name="camera.fill" catalog="system" width="128" height="96"/>
         <image name="circle.grid.3x3.fill" catalog="system" width="128" height="112"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="location.circle.fill" catalog="system" width="128" height="121"/>
         <image name="location.fill" catalog="system" width="128" height="115"/>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
         <image name="pencil" catalog="system" width="128" height="113"/>

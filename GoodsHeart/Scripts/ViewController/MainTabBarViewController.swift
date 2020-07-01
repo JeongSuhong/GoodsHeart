@@ -24,8 +24,7 @@ class MainTabBarViewController: UITabBarController {
  //MARK: - Tab
 extension MainTabBarViewController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-
-        print( tabBarController.selectedIndex)
+        
         if tabBarController.selectedIndex == 1{
             tabBarController.selectedIndex = prevSelectIndex
             let alert = UIAlertController.init(title: nil, message: nil, preferredStyle: .actionSheet)

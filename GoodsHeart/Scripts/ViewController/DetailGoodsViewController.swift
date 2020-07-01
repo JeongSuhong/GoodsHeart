@@ -23,7 +23,7 @@ class DetailGoodsViewController: UIViewController {
         urlField.text = url
         
         DownloadGoodsDataManager().downloadGoodsData(url: url, completion: { response in
-            self.thumnailView.image = UIImage(data: response.thumnail!)
+            self.thumnailView.image = response.thumnail!
             self.goodsTitle.text = response.title
             self.goodsPrice.text = response.price
         })
@@ -38,5 +38,16 @@ class DetailGoodsViewController: UIViewController {
         let controller = self.storyboard?.instantiateViewController(identifier: "AddOfflineGoodsViewController")
         controller?.modalPresentationStyle = .fullScreen
         present(controller!, animated: false, completion: nil)
+    }
+    
+    @IBAction func updateGoodsData(_ sender: UIButton) {
+        let url = urlField.text!
+        
+        DownloadGoodsDataManager().downloadGoodsData(url: url, completion: { response in
+            self.thumnailView.image = response.thumnail!
+            self.goodsTitle.text = response.title
+            self.goodsPrice.text = response.price
+        })
+
     }
 }
