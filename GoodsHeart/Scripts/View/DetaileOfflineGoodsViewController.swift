@@ -26,25 +26,7 @@ class DetailOfflineGoodsViewController : UIViewController {
     func UpdateAddress(value :String?) {
         addressText.text = value
     }
-    
-    @IBAction func tapImageView(_ sender: UITapGestureRecognizer) {
-        
-        let alert = UIAlertController.init(title: nil, message: nil, preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "카메라 촬영", style: .default, handler: { (action) in
-            // Camera Not Working When Xcode Simurator
-//            self.imagePickerController.sourceType = .camera
-//            self.present(self.imagePickerController, animated: true, completion: nil)
-            return
-            }))
-            alert.addAction(UIAlertAction(title: "앨범 선택", style: .default, handler: { (action) in
-                self.imagePickerController.sourceType = .photoLibrary
-                self.present(self.imagePickerController, animated: true, completion: nil)
-                return
-                }))
-        alert.addAction(UIAlertAction(title: "취소", style: .cancel, handler: nil))
-        
-                    self.present(alert, animated: true, completion: nil)
-    }
+
     
 }
 

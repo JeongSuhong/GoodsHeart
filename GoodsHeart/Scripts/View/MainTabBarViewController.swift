@@ -10,8 +10,6 @@ import UIKit
 
 class MainTabBarViewController: UITabBarController {
     
-    var prevSelectIndex = 0
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,28 +21,25 @@ class MainTabBarViewController: UITabBarController {
 }
  //MARK: - Tab
 extension MainTabBarViewController: UITabBarControllerDelegate {
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        
-        if tabBarController.selectedIndex == 1{
-            tabBarController.selectedIndex = prevSelectIndex
+    
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool{
+
+            let tabbarIndex = tabBarController.viewControllers!.index(of: viewController)!
+        if tabbarIndex == 1{
             let alert = UIAlertController.init(title: nil, message: nil, preferredStyle: .actionSheet)
             alert.addAction(UIAlertAction(title: "온라인 상품 추가", style: .default, handler: { (action) in
-                tabBarController.selectedIndex = 1
-                self.prevSelectIndex = 1
+                
+                
             }))
             alert.addAction(UIAlertAction(title: "오프라인 상품 추가", style: .default, handler:{(action) in
-                     self.prevSelectIndex = 1
-                
-                let controller = self.storyboard?.instantiateViewController(identifier: "AddOfflineGoodsViewController")
-            controller?.modalPresentationStyle = .fullScreen
-                   self.present(controller!, animated: false, completion: nil)
             }))
             alert.addAction(UIAlertAction(title: "취소", style: .cancel, handler: nil))
             
             present(alert, animated: true, completion: nil)
-        }
-        else{
-        prevSelectIndex = tabBarController.selectedIndex
+            
+            return false
+        } else {
+            return true
         }
     }
 }
